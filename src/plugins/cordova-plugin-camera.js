@@ -6,7 +6,7 @@ exports.install = function (Vue, options, cb) {
     }
 
     // pass through the camera object
-    Vue.cordova.camera = navigator.camera
+    Vue.prototype.$cordova.camera = navigator.camera
 
     return cb(true)
 
