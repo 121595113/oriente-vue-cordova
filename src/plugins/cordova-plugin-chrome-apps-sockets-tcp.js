@@ -6,7 +6,7 @@ exports.install = function (Vue, options, cb) {
     }
 
     // pass through the object
-    Vue.prototype.$cordova.chromeSocketsTcp = chrome.sockets.tcp
+    Vue.cordova.chromeSocketsTcp = chrome.sockets.tcp
 
     return cb(true)
 

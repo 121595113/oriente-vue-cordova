@@ -6,7 +6,7 @@ exports.install = function (Vue, options, cb) {
     }
 
     // pass through the contacts object
-    Vue.prototype.$cordova.contacts = navigator.contacts
+    Vue.cordova.contacts = navigator.contacts
 
     return cb(true)
 

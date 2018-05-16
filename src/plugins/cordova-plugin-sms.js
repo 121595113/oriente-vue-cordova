@@ -6,7 +6,7 @@ exports.install = function (Vue, options, cb) {
     }
 
     // pass through the sms object
-    Vue.prototype.$cordova.sms = window.sms
+    Vue.cordova.sms = window.sms
 
     return cb(true)
 

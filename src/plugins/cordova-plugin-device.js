@@ -19,7 +19,7 @@ exports.install = function (Vue, options, cb) {
 
     Object.keys(Vue.cordova.device).forEach(key => {
       if (typeof device[key] !== 'undefined') {
-        Vue.prototype.$cordova.device[key] = device[key]
+        Vue.cordova.device[key] = device[key]
       }
     })
 

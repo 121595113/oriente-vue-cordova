@@ -6,7 +6,7 @@ exports.install = function (Vue, options, cb) {
     }
 
     // pass through the geolocation object
-    Vue.prototype.$cordova.geolocation = navigator.geolocation
+    Vue.cordova.geolocation = navigator.geolocation
 
     return cb(true)
 

@@ -9,12 +9,13 @@ const pluginsList = [
 ]
 
 exports.install = (Vue, options) => {
-  // declare global Vue.prototype.$cordova object
-  Vue.prototype.$cordova = Vue.prototype.$cordova || {
+  // declare global Vue.cordova object
+  Vue.cordova = Vue.cordova || {
     deviceready: false,
       plugins: []
   }
 
+  Vue.prototype.$cordova = Vue.prototype.$cordova || {}
   // Cordova events wrapper
   Vue.prototype.$cordova.on = (eventName, cb) => {
     document.addEventListener(eventName, cb, false)
@@ -22,7 +23,7 @@ exports.install = (Vue, options) => {
 
   // let Vue know that deviceready has been triggered
   document.addEventListener('deviceready', () => {
-    Vue.prototype.$cordova.deviceready = true
+    Vue.cordova.deviceready = true
   }, false)
 
   // load supported plugins
@@ -30,7 +31,7 @@ exports.install = (Vue, options) => {
     let plugin = require('./plugins/' + pluginName)
     plugin.install(Vue, options, pluginLoaded => {
       if (pluginLoaded) {
-        Vue.prototype.$cordova.plugins.push(pluginName)
+        Vue.cordova.plugins.push(pluginName)
       }
       if (Vue.config.debug) {
         console.log('[VueCordova]', pluginName, '→', pluginLoaded ? 'loaded' : 'not loaded')
