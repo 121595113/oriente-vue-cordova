@@ -6,7 +6,7 @@ exports.install = function (Vue, options, cb) {
     }
 
     // default values
-    Vue.cordova.device = {
+    Vue.prototype.$cordova.device = {
       cordova: null,
       model: null,
       platform: null,
@@ -17,9 +17,9 @@ exports.install = function (Vue, options, cb) {
       serial: null
     }
 
-    Object.keys(Vue.cordova.device).forEach(key => {
+    Object.keys(Vue.prototype.$cordova.device).forEach(key => {
       if (typeof device[key] !== 'undefined') {
-        Vue.cordova.device[key] = device[key]
+        Vue.prototype.$cordova.device[key] = device[key]
       }
     })
 
