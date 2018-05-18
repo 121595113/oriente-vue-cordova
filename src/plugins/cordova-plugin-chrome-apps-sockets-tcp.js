@@ -1,7 +1,7 @@
 exports.install = function (Vue, options, cb) {
   document.addEventListener('deviceready', () => {
 
-    if (typeof chrome.sockets.tcp === 'undefined') {
+    if (typeof chrome === 'undefined' || typeof chrome.sockets === 'undefined' || typeof chrome.sockets.tcp === 'undefined') {
       return cb(false)
     }
 

@@ -7,7 +7,7 @@
 Add the NPM package to your project
 
 ```shell
-npm install --save vue-cordova
+npm install --save orientevue-cordova
 ```
 
 Add the plugin to your Vue instance according to your setup
@@ -15,19 +15,19 @@ Add the plugin to your Vue instance according to your setup
 ```javascript
 // CommonJS
 var Vue = require('vue');
-var VueCordova = require('vue-cordova');
+var VueCordova = require('oriente-vue-cordova');
 Vue.use(VueCordova);
 
 // import
 import Vue from 'vue'
-import VueCordova from 'vue-cordova'
+import VueCordova from 'oriente-vue-cordova'
 Vue.use(VueCordova)
 ```
 
-The package provides a global object `Vue.cordova`
+The package provides a global 实例对象 `this.$cordova`
 
 ```javascript
-console.log(Vue.cordova);
+console.log(this.$cordova);
 ```
 
 This object provides API for the following [events](#events) and will hold the Cordova [plugins](#plugins) API objects you might be using.
@@ -41,3 +41,17 @@ A repository with a [full working demo](https://github.com/kartsims/vue-cordova-
 ### Documentation
 
 For more information, check out [http://kartsims.github.io/vue-cordova](http://kartsims.github.io/vue-cordova)
+
+### 插件列表
+
+- cordova-plugin-camera
+- cordova-plugin-device
+- cordova-plugin-geolocation
+- cordova-plugin-contacts
+- cordova-plugin-chrome-apps-sockets-tcp
+- cordova-plugin-oriente-axios
+- cordova-plugin-sms
+
+### 其中新增
+
+- cordova-plugin-oriente-axios
