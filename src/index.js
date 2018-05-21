@@ -6,6 +6,7 @@ const pluginsList = [
   'cordova-plugin-contacts',
   'cordova-plugin-chrome-apps-sockets-tcp',
   'cordova-plugin-oriente-axios',
+  'cordova-plugin-oriente-router',
   'cordova-plugin-sms'
 ]
 

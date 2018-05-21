@@ -55,3 +55,4 @@ For more information, check out [http://kartsims.github.io/vue-cordova](http://k
 ### 其中新增
 
 - cordova-plugin-oriente-axios
+- cordova-plugin-oriente-router
