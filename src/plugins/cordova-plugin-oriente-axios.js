@@ -6,7 +6,7 @@ exports.install = function (Vue, options, cb) {
     }
 
     // pass through the sms object
-    Vue.prototype.$cordova.axios = cordova.plugins.axios.axios
+    Vue.prototype.$cordova.axios = cordova.plugins.axios.request
     Object.assign(Vue.prototype.$cordova.axios, cordova.plugins.axios)
 
     return cb(true)
